@@ -45,6 +45,7 @@ export default function Clients() {
 
   return (
     <div>
+      <Link to="/clients/add">Add Client</Link>
       <table class="table table-striped">
         <thead>
           <tr>

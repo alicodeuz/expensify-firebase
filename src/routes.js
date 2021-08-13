@@ -2,6 +2,9 @@ import { FaUserPlus, FaUsers } from 'react-icons/all';
 import AddClients from './containers/Clients/Add';
 import EditClients from './containers/Clients/Edit';
 import Clients from './containers/Clients';
+import SignIn from './containers/Auth/SignIn';
+import SignUp from './containers/Auth/SignUp';
+import Profile from './containers/Profile/Profile';
 
 const routes = {
   authenticated: [
@@ -26,8 +29,30 @@ const routes = {
       exact: true,
       icon: <FaUserPlus />
     },
+    {
+      key: 'profile',
+      path: '/profile',
+      component: Profile,
+      exact: true,
+      icon: <FaUserPlus />
+    },
   ],
-  public: [],
+  public: [
+    {
+      key: 'sign-in',
+      path: '/sign-in',
+      component: SignIn,
+      exact: true,
+      icon: <FaUserPlus />
+    },
+    {
+      key: 'sign-up',
+      path: '/sign-up',
+      component: SignUp,
+      exact: true,
+      icon: <FaUserPlus />
+    },
+  ],
 }
 
 export default routes;
